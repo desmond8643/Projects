@@ -1,11 +1,11 @@
 import tweepy
 import csv
 
-# Enter your Twitter API keys
-consumer_key = 'dB64fOKmvmdvuahJK23hiLUsF'
-consumer_secret = 'BZ8P3s7LWZLpPaeWFj6sIfY9IPUpB5WPWdvSEDi5OEJB7obJrk'
-access_token = '1655824642907717632-F9A8dHoHLafQdhFiPvnisYC5ZvTWMA'
-access_token_secret = 'FDtAyJQNpiKwKraYZKnI1uxgq75aVEmPG13sSKY8nr3vD'
+# Twitter API keys
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_token_secret = ''
 
 # Authenticate with Twitter API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
