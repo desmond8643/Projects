@@ -5,6 +5,11 @@
 - This game is inspired by pac-man, I changed up the rule of the game by making it a time trial, win the game by letting pac-man eat all the dots in the field, and you can try to beat your own record
 - Controls: up, down, left, right
 
+## Web Scraping
+- maimai is an arcade rhythm game, and user can access their website to look at their records
+- For my convenient, I made a bookmarklet to web scrape all the songs record from a particular difficulty to an array, so I can use that array to search and sort for the songs' detail that I wanted
+- The records includes a level, title, percentage score and accuaracy score (x/y) 
+
 ## Twitter
 - To obtain following and follower list from a specific user with the help of a library in Python (Tweepy) and a Twitter developer account, and put it in a csv
 - I was not able to obtain the data beacause I didn't get my twitter account to elevated access
