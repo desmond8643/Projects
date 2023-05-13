@@ -8,7 +8,7 @@
 ## Web Scraping
 - maimai is an arcade rhythm game, and user can access the official website to look at their records
 - For my convenient, I made a bookmarklet to web scrape all the songs record from a particular difficulty to an array, so I can use that array to search and sort for the songs' detail that I wanted
-- The records includes a level, title, percentage score and accuaracy score (x/y) 
+- The records includes level, title, percentage score and accuaracy score (x/y) 
 
 ## Twitter
 - To obtain following and follower list from a specific user with the help of a library in Python (Tweepy) and a Twitter developer account, and put it in a csv
