@@ -23,3 +23,6 @@
 ## Programming Exercises
 - Stereotypical programming exercises for developers
 - Practices to strengthen my skills on the language and the logic behind the tasks
+
+## Calculator
+- A simple calculator made using JavaScript
