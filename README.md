@@ -12,7 +12,7 @@
 - A rock paper scissors game made using JavaScript
 
 ## Pac-man
-- It is a game created in Scratch, it is an assignment from CS50 week 0
+- A game created with Scratch, it is an assignment from CS50 week 0
 - This game is inspired by pac-man, the rule of the game has changed by making it a time trial, win the game by letting pac-man eat all the dots in the field, and players can try to beat their own record
 - Controls: up, down, left, right
 
