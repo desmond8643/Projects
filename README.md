@@ -18,7 +18,7 @@
 
 ## Programming Exercises
 - Stereotypical programming exercises for developers
-- Practices to strengthen skills of the languages and the logic behind the tasks
+- Practices to strengthen skills of the language and the logic behind the task
 
 ## Twitter
 - To obtain following and follower list from a specific user with the help of a library in Python (Tweepy) and a Twitter developer account, and put it in a csv
