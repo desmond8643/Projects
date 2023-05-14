@@ -24,5 +24,6 @@
 - Stereotypical programming exercises for developers
 - Practices to strengthen my skills on the language and the logic behind the tasks
 
-## Calculator
+## Mini projects 
 - A simple calculator made using JavaScript
+- A rock paper scissors game made using JavaScript
