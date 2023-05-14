@@ -20,7 +20,7 @@
 - Stereotypical programming exercises for developers
 - Practices to strengthen skills of the language and the logic behind the task
 
-## Twitter
+## Twitter API
 - To obtain following and follower list from a specific user with the help of a library in Python (Tweepy) and a Twitter developer account, and put it in a csv
 - The data was not able to obtain beacause my developer Twitter account was not able to get elevated access
 - If data is obtained, it will be sorted according to mutual friends/follower, following without mutual followers and follower without mutual followers
