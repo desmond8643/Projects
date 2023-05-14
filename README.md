@@ -31,3 +31,6 @@
 - A bookmarklet was made with JavaScript to web scrape all the songs record from a particular difficulty to an array, so the data in the array can be used to search and sort for the songs' detail
 - The records includes level, title, percentage score and accuaracy score (x/y) 
 - To obtain the last play date and play count for each song, which is contained in a separated page, another bookmarklet is used get the input value of each song, which is a separate directory to the song list 
+
+## Youtube.com Clone
+- Recreated a homepage of youtube.com that is interactive by using various HTML/CSS features
