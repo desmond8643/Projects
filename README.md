@@ -3,7 +3,7 @@
 ## My website (in progress)
 - A website that introduce myself and showcase the skills that I have learnt 
 
-## Amazon.com Layout
+## Amazon.com Clone
 - An interactive website that is created with HTML, CSS and JavaScript
 - Features such as shopping cart
 
@@ -33,4 +33,4 @@
 - To obtain the last play date and play count for each song, which is contained in a separated page, another bookmarklet is used get the input value of each song, which is a separate directory to the song list 
 
 ## Youtube.com Clone
-- Recreated a homepage of youtube.com that is interactive by using various HTML/CSS features
+- Recreated a homepage of youtube.com that is interactive by using various HTML and CSS features
