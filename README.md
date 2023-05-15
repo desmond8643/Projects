@@ -10,6 +10,7 @@
 ## Mini projects 
 - A simple calculator made using JavaScript in HTML
 - A rock paper scissors game made using JavaScript in HTML
+- A coin flip game made using JavaScript in HTML
 
 ## Pac-man
 - A game created with Scratch, it is an assignment from CS50 week 0
