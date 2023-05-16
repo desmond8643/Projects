@@ -24,36 +24,34 @@ const totalScore = getMasScore + getRemasScore;
 //store player 1 and player 2 score
 let player1Score = [];
 let player2Score = [];
-for (let i = 0; i < getMasScore.length; i++) {
-    if (i % 2 === 0) {
-        player1Score.push(getMasScore[i].innerText);
-    } else {
-        player2Score.push(getMasScore[i].innerText);
-    }
-}
+getplayerScore(getMasScore);
+getplayerScore(getRemasScore);
 
-for (let i = 0; i < getRemasScore.length; i++) {
-    if (i % 2 === 0) {
-        player1Score.push(getRemasScore[i].innerText);
-    } else {
-        player2Score.push(getRemasScore[i].innerText);
-    }
-}
+//Get player 1 and player 2 number of SSS+
+const player1Max = getplayerMax(player1Score);
+const player2Max = getplayerMax(player2Score);
 
-let player1Max = 0;
-let player2Max = 0;
 
-for (let i = 0; i < player1Score.length; i++) {
-    if (parseFloat(player1Score[i]) >= 100.5) {
-        player1Max += 1;
-    }
-}
-
-for (let i = 0; i < player2Score.length; i++) {
-    if (parseFloat(player2Score[i]) >= 100.5) {
-        player2Max += 1;
-    }
-}
-
+//Show result in webpage
 document.getElementsByClassName('see_through_block m_15 p_5 p_t_0')[0].innerHTML = `${playerName[0]} SSS+: ${player1Max}<br />
 ${playerName[1]} SSS+: ${player2Max}`;
+
+//Functions
+function getplayerMax(playerScore) {
+    for (let i = 0; i < playerScore.length; i++) {
+        if (parseFloat(playerScore[i]) >= 100.5) {
+            playerMax += 1;
+        }
+    }
+    return playerMax;
+}
+
+function getplayerScore(getScore) {
+    for (let i = 0; i < getScore.length; i++) {
+        if (i % 2 === 0) {
+            player1Score.push(getScore[i].innerText);
+        } else {
+            player2Score.push(getScore[i].innerText);
+        }
+    }
+}
