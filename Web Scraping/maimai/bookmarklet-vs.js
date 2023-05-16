@@ -20,8 +20,6 @@ let getMasScore = document.getElementsByClassName("p_r master_score_label w_120 
 //get remaster score
 let getRemasScore = document.getElementsByClassName("p_r remaster_score_label w_120 f_b");
 
-const totalScore = masScore + remasScore;
-
 //store player 1 and player 2 score
 let player1Score = [];
 let player2Score = [];
