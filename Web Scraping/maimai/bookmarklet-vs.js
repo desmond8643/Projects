@@ -4,7 +4,6 @@ let playerName = [];
 for (let i = 0; i < getPlayer.length; i++) {     
     playerName.push(getPlayer[i].innerText);   
 }   
-console.log(playerName);
 
 //get song names
 let getSong = document.getElementsByClassName("music_name_block t_l f_13 break");   
@@ -12,7 +11,6 @@ let songName = [];
 for (let i = 0; i < getSong.length; i++) {     
     songName.push(getSong[i].innerText);   
 }   
-console.log(songName);
 
 //get master score
 let getMasScore = document.getElementsByClassName("p_r master_score_label w_120 f_b");
@@ -38,7 +36,6 @@ for (let i = 0; i < getRemasScore.length; i++) {
         player2Score.push(getRemasScore[i].innerText);
     }
 }
-//console.log(player1Score);
 
 let player1Max = 0;
 let player2Max = 0;
