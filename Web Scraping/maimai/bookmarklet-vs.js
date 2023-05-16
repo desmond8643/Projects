@@ -50,7 +50,13 @@ for (let i = 0; i < player1Score.length; i++) {
         player1Max += 1;
     }
 }
-console.log(player1Max);
 
-document.querySelector('.see_through_block m_15 p_5 p_t_0').innerHTML = `<p>${playerName[0]} SSS+: ${player1Max}</p>`;
+for (let i = 0; i < player2Score.length; i++) {
+    if (parseFloat(player2Score[i]) >= 100.5) {
+        player2Max += 1;
+    }
+}
+
+document.getElementsByClassName('see_through_block m_15 p_5 p_t_0')[0].innerHTML = `${playerName[0]} SSS+: ${player1Max}
+${playerName[1]} SSS+: ${player2Max}`;
 
