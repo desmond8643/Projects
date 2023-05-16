@@ -1,0 +1,6 @@
+let elements = document.getElementsByClassName("p_l_5 t_l f_l f_12 f_b");   
+let playName = [];   
+for (let i = 0; i < elements.length; i++) {     
+    data.push(elements[i].innerText);   
+    }   
+    console.log(data);
