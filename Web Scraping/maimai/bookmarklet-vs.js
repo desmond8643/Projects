@@ -57,6 +57,5 @@ for (let i = 0; i < player2Score.length; i++) {
     }
 }
 
-document.getElementsByClassName('see_through_block m_15 p_5 p_t_0')[0].innerHTML = `${playerName[0]} SSS+: ${player1Max}
+document.getElementsByClassName('see_through_block m_15 p_5 p_t_0')[0].innerHTML = `${playerName[0]} SSS+: ${player1Max}<br />
 ${playerName[1]} SSS+: ${player2Max}`;
-
