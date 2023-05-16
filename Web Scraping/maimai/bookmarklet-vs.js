@@ -16,16 +16,41 @@ console.log(songName);
 
 //get master score
 let getMasScore = document.getElementsByClassName("p_r master_score_label w_120 f_b");
-let masScore = [];
-for (let i = 0; i < getMasScore.length; i++) {
-    masScore.push(getMasScore[i].innerText);
-}
-console.log(masScore);
 
 //get remaster score
 let getRemasScore = document.getElementsByClassName("p_r remaster_score_label w_120 f_b");
-let remasScore = [];
-for (let i = 0; i < getRemasScore.length; i++) {
-    remasScore.push(getRemasScore[i].innerText);
+
+const totalScore = masScore + remasScore;
+
+//store player 1 and player 2 score
+let player1Score = [];
+let player2Score = [];
+for (let i = 0; i < getMasScore.length; i++) {
+    if (i % 2 === 0) {
+        player1Score.push(getMasScore[i].innerText);
+    } else {
+        player2Score.push(getMasScore[i].innerText);
+    }
 }
-console.log(remasScore);
+
+for (let i = 0; i < getRemasScore.length; i++) {
+    if (i % 2 === 0) {
+        player1Score.push(getRemasScore[i].innerText);
+    } else {
+        player2Score.push(getRemasScore[i].innerText);
+    }
+}
+//console.log(player1Score);
+
+let player1Max = 0;
+let player2Max = 0;
+
+for (let i = 0; i < player1Score.length; i++) {
+    if (parseFloat(player1Score[i]) >= 100.5) {
+        player1Max += 1;
+    }
+}
+console.log(player1Max);
+
+document.querySelector('.see_through_block m_15 p_5 p_t_0').innerHTML = `<p>${playerName[0]} SSS+: ${player1Max}</p>`;
+
