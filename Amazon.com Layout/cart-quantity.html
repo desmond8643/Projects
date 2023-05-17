@@ -10,7 +10,7 @@
 
     <body>
         <button onclick="
-            console.log(`Cart Quantity: ${cartQuantity}`);    
+            displayCartQuantity();
         ">Show Quantity</button>
         <button onclick="
             updateCartQuantity(1);
@@ -33,11 +33,11 @@
         ">+5</button>
     
         <button onclick="
-            cartQuantity(-1);
+            updateCartQuantity(-1);
         ">Remove From Cart</button>
 
         <button onclick="
-            cartQuantity(-2);
+            updateCartQuantity(-2);
         ">-2</button>
 
         <button onclick="
@@ -47,8 +47,10 @@
         <button onclick="
             console.log('Cart was reset.')
             cartQuantity = 0;
-            console.log(`Cart Quantity: ${cartQuantity}`);
+            displayCartQuantity();
+
         ">Reset Cart</button>
+        <p class="js-quantity"></p>
 
         <script>
             /*camelCase*/
@@ -56,6 +58,8 @@
             /*kebab-case not work in javascript*/
             /*snake_case is used in other languages*/
             let cartQuantity = 0;
+            displayCartQuantity();
+
             function updateCartQuantity(change) {
                 if (cartQuantity + change > 10 ) {
                     alert('The cart is full');
@@ -65,7 +69,12 @@
                     return;
                 } 
                 cartQuantity += change;
-                console.log(`Cart Quantity: ${cartQuantity}`);
+
+                displayCartQuantity();
+            }
+
+            function displayCartQuantity() {
+                document.querySelector('.js-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
             }
                 
         </script>
