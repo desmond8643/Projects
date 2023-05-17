@@ -8,9 +8,9 @@
 - Features such as shopping cart
 
 ## Mini projects 
-- A calculator made using HTML/CSS and JavaScript
-- A rock paper scissors game made using HTML/CSS and JavaScript
-- A coin flip game made using JavaScript in HTML
+- Calculator made using HTML/CSS and JavaScript
+- Rock paper scissors game made using HTML/CSS and JavaScript
+- Coin flip game made using JavaScript in HTML
 
 ## Pac-man
 - A game created with Scratch, it is an assignment from CS50 week 0
