@@ -38,6 +38,7 @@ ${playerName[1]} SSS+: ${player2Max}`;
 
 //Functions
 function getplayerMax(playerScore) {
+    let playerMax = 0;
     for (let i = 0; i < playerScore.length; i++) {
         if (parseFloat(playerScore[i]) >= 100.5) {
             playerMax += 1;
