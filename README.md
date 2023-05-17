@@ -8,8 +8,8 @@
 - Features such as shopping cart
 
 ## Mini projects 
-- A simple calculator made using JavaScript in HTML
-- A rock paper scissors game made using JavaScript in HTML
+- A calculator made using HTML/CSS and JavaScript
+- A rock paper scissors game made using HTML/CSS and JavaScript
 - A coin flip game made using JavaScript in HTML
 
 ## Pac-man
