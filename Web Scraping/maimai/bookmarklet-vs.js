@@ -1,22 +1,22 @@
 //get player names
-let getPlayer = document.getElementsByClassName("p_l_5 t_l f_l f_12 f_b");   
+const getPlayer = document.getElementsByClassName("p_l_5 t_l f_l f_12 f_b");   
 let playerName = [];   
 for (let i = 0; i < getPlayer.length; i++) {     
     playerName.push(getPlayer[i].innerText);   
 }   
 
 //get song names
-let getSong = document.getElementsByClassName("music_name_block t_l f_13 break");   
+const getSong = document.getElementsByClassName("music_name_block t_l f_13 break");   
 let songName = [];   
 for (let i = 0; i < getSong.length; i++) {     
     songName.push(getSong[i].innerText);   
 }   
 
 //get master score
-let getMasScore = document.getElementsByClassName("p_r master_score_label w_120 f_b");
+const getMasScore = document.getElementsByClassName("p_r master_score_label w_120 f_b");
 
 //get remaster score
-let getRemasScore = document.getElementsByClassName("p_r remaster_score_label w_120 f_b");
+const getRemasScore = document.getElementsByClassName("p_r remaster_score_label w_120 f_b");
 
 //store player 1 and player 2 score
 let player1Score = [];
@@ -30,8 +30,11 @@ const player2Max = getplayerMax(player2Score);
 
 
 //Show result in webpage
-document.getElementsByClassName('see_through_block m_15 p_5 p_t_0')[0].innerHTML = `${playerName[0]} SSS+: ${player1Max}<br />
-${playerName[1]} SSS+: ${player2Max}`;
+let playervsHTML = `<p>${playerName[0]} SSS+: ${player1Max}</p>`;
+playervsHTML += `<p>${playerName[1]} SSS+: ${player2Max}</p>`;
+const dashes = '<p>---------------------------------</p>';
+document.getElementsByClassName('see_through_block m_15 p_5 p_t_0')[0].innerHTML = `${dashes}${playervsHTML}${dashes}`;
+// `${playerName[0]} SSS+: ${player1Max}<br />${playerName[1]} SSS+: ${player2Max}`;
 
 //Functions
 function getplayerMax(playerScore) {
