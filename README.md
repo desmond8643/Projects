@@ -11,6 +11,7 @@
 - Calculator made using HTML/CSS and JavaScript
 - Rock paper scissors game made using HTML/CSS and JavaScript
 - Coin flip game made using JavaScript in HTML
+- To-do List made using HTML/CSS and JavaScript
 
 ## Pac-man
 - A game created with Scratch, it is an assignment from CS50 week 0
