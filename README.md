@@ -7,13 +7,12 @@
 - An interactive website that is created with HTML, CSS and JavaScript
 - Features such as shopping cart
 
-## Mini projects 
-- Calculator made using HTML/CSS and JavaScript
-- Rock paper scissors game made using HTML/CSS and JavaScript
+## Games
 - Coin flip game made using JavaScript in HTML
-- To-do List made using HTML/CSS and JavaScript
+- Pac-man made using Scratch
+- Rock paper scissors game made using HTML/CSS and JavaScript
 
-## Pac-man
+## Game: Pac-man
 - A game created with Scratch, it is an assignment from CS50 week 0
 - This game is inspired by pac-man, the rule of the game has changed by making it a time trial, win the game by letting pac-man eat all the dots in the field, and players can try to beat their own record
 - Controls: up, down, left, right, space
@@ -27,6 +26,10 @@
 - The data was not able to obtain beacause my developer Twitter account was not able to get elevated access
 - If data is obtained, it will be sorted according to mutual friends/follower, following without mutual followers and follower without mutual followers
 - To find out who are the fans, and who are the following one sided
+
+## Utilities
+- Calculator made using HTML/CSS and JavaScript
+- To-do List made using HTML/CSS and JavaScript
 
 ## Web Scraping
 - maimai is an arcade rhythm game, and user can access the official website to look at their records
