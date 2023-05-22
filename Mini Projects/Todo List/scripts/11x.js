@@ -1,4 +1,4 @@
-const todoList = JSON.parse(localStorage.getItem('todoList')) || [{
+const todoList = [{
     name: 'make dinner',
     dueDate: '2021-12-22'
 }];
@@ -8,24 +8,18 @@ renderTodoList();
 function renderTodoList() {
     let todoListHTML = '';
 
-    for (let i = 0; i < todoList.length; i++) {
-        const todoObject = todoList[i];
-        //const name = todoObject.name;
-        //const dueDate = todoObject.dueDate;
-        const { name, dueDate } = todoObject;
-        
+    todoList.forEach(function(todoObject, index){
+        const { name, dueDate } = todoObject;     
         const html = `
             <div>${name}</div>
             <div>${dueDate}</div> 
             <button onclick="
-                todoList.splice(${i}, 1);
+                todoList.splice(${index}, 1);
                 renderTodoList();
             " class="delete-todo-button">Delete</button>
         `;
-
         todoListHTML += html;
-        
-    }
+    });
 
     console.log(todoListHTML);
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
@@ -49,10 +43,4 @@ function addTodo() {
     inputElement.value = '';
 
     renderTodoList();
-
-    saveToStorage();
-}
-
-function saveToStorage() {
-    localStorage.setItem('todoList', JSON.stringify(todoList));
 }
