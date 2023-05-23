@@ -28,9 +28,12 @@ function autoPlay() {
         }, 1000);
 
         isAutoPlaying = true;
+
+        document.querySelector('.js-auto-play-button').innerHTML = 'Stop Playing';
     } else {
         clearInterval(intervalId);
         isAutoPlaying = false;
+        document.querySelector('.js-auto-play-button').innerHTML = 'Auto Play';
     }
 }
 
@@ -47,11 +50,52 @@ document.querySelector('.js-scissors-button').addEventListener('click', () => {
 });
 
 document.querySelector('.js-reset-score-button').addEventListener('click', () => {
+    showResetConfirmation();
+});
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'Backspace') {
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+    }
+});
+
+function showResetConfirmation() {
+    document.querySelector('.js-reset-confirmation').innerHTML = 
+    `Are you sure you want to reset the score?
+    <button class="js-reset-yes-button">Yes</button>
+    <button class="js-reset-no-button">No</button>
+    `;
+
+    document.querySelector('.js-reset-yes-button').addEventListener('click', () => {
+        resetScore();
+        hideResetconfirmation();
+    });
+
+    document.querySelector('.js-reset-no-button').addEventListener('click', () => {
+        hideResetconfirmation();
+    });
+}
+
+function hideResetconfirmation() {
+    document.querySelector('.js-reset-confirmation').innerHTML = '';
+}
+
+function resetScore() {
     score.wins = 0;
     score.losses = 0;
     score.ties = 0;
     localStorage.removeItem('score');
     updateScoreElement();
+}
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'a') {
+        autoPlay();
+    }
 });
 
 document.querySelector('.js-auto-play-button').addEventListener('click', () => {
@@ -140,3 +184,4 @@ function pickComputerMove() {
 
     return computerMove;
 }
+
