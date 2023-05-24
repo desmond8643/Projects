@@ -11,6 +11,7 @@
 - Coin flip game made using JavaScript in HTML
 - Pac-man made using Scratch
 - Rock paper scissors game made using HTML/CSS and JavaScript
+- Tic-Tac-Toe game made using HTML/CSS and JavaScript
 
 ## Game: Pac-man
 - A game created with Scratch, it is an assignment from CS50 week 0
