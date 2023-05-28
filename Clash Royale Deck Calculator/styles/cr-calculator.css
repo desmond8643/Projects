@@ -1,0 +1,7 @@
+.troop-list {
+    display: flex;
+}
+
+.change-level {
+    padding-left: 30px;
+}
