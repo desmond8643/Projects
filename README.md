@@ -9,6 +9,7 @@
 
 ## Games
 - Coin flip game made using JavaScript in HTML
+- Deck Builder (Clash Royale) made using JavaScript in HTML
 - Pac-man made using Scratch
 - Rock paper scissors game made using HTML/CSS and JavaScript
 - Tic-Tac-Toe game made using HTML/CSS and JavaScript
