@@ -1,21 +1,13 @@
-const decks = [];
-
-const troops = {
-    troop1: document.getElementById("troop-select-1"),
-    troop2: document.getElementById("troop-select-2"),
-    troop3: document.getElementById("troop-select-3"),
-    troop4: document.getElementById("troop-select-4"),
-    troop5: document.getElementById("troop-select-5"),
-    troop6: document.getElementById("troop-select-6"),
-    troop7: document.getElementById("troop-select-7"),
-    troop8: document.getElementById("troop-select-8"),
-}
-
-let slot = 1;
-for (const troop in troops) {
-    createSelect(troops[troop], slot);
-    slot++;
-}
+const troops = [
+    {troopSelect: document.getElementById("troop-select-1")},
+    {troopSelect: document.getElementById("troop-select-2")},
+    {troopSelect: document.getElementById("troop-select-3")},
+    {troopSelect: document.getElementById("troop-select-4")},
+    {troopSelect: document.getElementById("troop-select-5")},
+    {troopSelect: document.getElementById("troop-select-6")},
+    {troopSelect: document.getElementById("troop-select-7")},
+    {troopSelect: document.getElementById("troop-select-8")}
+];
 
 const deck = {
     1: '',
@@ -28,38 +20,16 @@ const deck = {
     8: ''
 }
 
-const champions = {
-    1: 'Archer Queen', 
-    2: 'Skeleton King', 
-    3: 'Monk', 
-    4: 'Golden Knight',
-    5: 'Mighty Miner'
-}
+const deckk = ['', '', '', '', '', '', '', '']
 
+const champions = ['Archer Queen', 'Skeleton King', 'Monk', 'Golden Knight','Mighty Miner']
 
-troops.troop1.addEventListener('change', () => {
-    selectTroop(troops.troop1, 1)
-});
-troops.troop2.addEventListener('change', () => {
-    selectTroop(troops.troop2, 2)
-});
-troops.troop3.addEventListener('change', () => {
-    selectTroop(troops.troop3, 3)
-});
-troops.troop4.addEventListener('change', () => {
-    selectTroop(troops.troop4, 4)
-});
-troops.troop5.addEventListener('change', () => {
-    selectTroop(troops.troop5, 5)
-});
-troops.troop6.addEventListener('change', () => {
-    selectTroop(troops.troop6, 6)
-});
-troops.troop7.addEventListener('change', () => {
-    selectTroop(troops.troop7, 7)
-});
-troops.troop8.addEventListener('change', () => {
-    selectTroop(troops.troop8, 8)
+troops.forEach((troopSelectId, index) => {
+    //index++;
+    createSelect(troopSelectId.troopSelect, index + 1);
+    troopSelectId.troopSelect.addEventListener('change', () => {
+        selectTroop(troopSelectId.troopSelect, index);
+    });
 });
 
 
@@ -84,35 +54,32 @@ document.querySelector('.js-confirm-button').addEventListener('click', () => {
 
 });
 
-function selectTroop(troop, slot) {
+function selectTroop(troop, index) {
     const selectedTroop = troop.options[troop.selectedIndex];
-    deck[slot] = selectedTroop.value;
-    console.log(deck);
-
-    for (const troopInTroops in troops) {
-        if (troopInTroops === troop) {
-            continue;
+    deckk[index] = selectedTroop.value;
+    console.log(deckk);
+    
+    troops.forEach((troopSelectId) => {
+        if (troopSelectId.troopSelect !== troop) {
+            disableTroops(troopSelectId.troopSelect, selectedTroop);
         }
-        disableTroops(troops[troopInTroops], selectedTroop);
-    } 
+    });
+
 }
 
 function disableTroops(troop, selectedTroop) {
-    /*
-    const championsLabel = troop.querySelector('optgroup[label="Champion"]');
-    const championsToLoop = championsLabel.querySelectorAll('option'); */
 
     for (let i = 0; i < troop.options.length; i++) {
-        if (troop.options[i].value === selectedTroop.value || Object.values(deck).includes(troop.options[i].value)) {
+        if (troop.options[i].value === selectedTroop.value || Object.values(deckk).includes(troop.options[i].value)) {
             troop.options[i].disabled = true;
         } else {
             troop.options[i].disabled = false;
         }
     }
 
-    for (let i = 1; i <= 8; i++) {
-        for (let j = 1; j <= 5; j++) {
-            if (deck[i] === champions[j] && troop.options[troop.selectedIndex].value !== champions[j]) {
+    for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < champions.length; j++) {
+            if (deckk[i] === champions[j] && troop.options[troop.selectedIndex].value !== champions[j]) {
                 disableChampions(troop);
             }
         }
@@ -131,7 +98,7 @@ function disableChampions(troop) {
 
 function createSelect(troop, slot) {
     troop.innerHTML = `
-    <option value="">--Troop ${slot}--</option>
+    <option value="" class="js-troop-options">--Troop ${slot}--</option>
     <optgroup label="Common">
         <option value="Barbarian">Barbarian</option>
         <option value="Archers">Archers</option>
@@ -188,6 +155,7 @@ function createSelect(troop, slot) {
         <option value="Zappies">Zappies</option>
         <option value="Elixir Golem">Elixir Golem</option>
         <option value="Battle Healer">Battle Healer</option>
+        <option value="Earthquake">Earthquake</option>
     </optgroup>
     <optgroup label="Epic">
         <option value="Prince">Prince</option>
