@@ -19,6 +19,6 @@
                 <input type="text" class="grid" id="js-grid-9" readonly>
         </div>
         <p class="description js-description"></p>
-        <script src="Scripts/tic-tac-toe.js"></script>
+        <script src="Scripts/tic-tac-toe-computer.js"></script>
     </body>
 </html>
