@@ -1,0 +1,95 @@
+h1, h2 {
+    padding-left: 8px;
+}
+
+.header {
+    position: relative;
+}
+
+.header .h1 {
+    position: absolute;
+}
+
+.reset-clan-war-deck-button {
+    position: absolute;
+    bottom: 7px;
+    left: 372px;
+}
+.random-clan-war-deck-button {
+    position: absolute;
+    bottom: 7px;
+    left: 465px;
+}
+
+.auto-clan-war-deck-button {
+    position: absolute;
+    bottom: 7px;
+    left: 540px;
+}
+
+.clan-war-deck {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.deck {
+    display: grid;
+    grid-gap: 7.5px;
+    grid-template-columns: repeat(4, 75px);
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (max-width: 1400px) {
+    .clan-war-deck {
+        grid-template-columns: 1fr 1fr;
+    }
+    .deck {
+        padding-bottom: 20px;
+    }
+}
+
+.deck-troop {
+    height: 90px;
+    width: 75px;
+    border-style: solid;
+    border-color: black
+}
+
+.deck-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.built-deck-list {
+    display: grid;
+    justify-content: center;
+}
+
+.built-deck {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2 {
+    position: absolute;
+    margin-top: 30px;
+}
+
+.troop-image {
+    width: 80px;   
+}
+
+.deck-troop .troop-image {
+    width: 75px;
+}
+
+.image-container {
+    margin-left: 100px;
+}
+
+.add-clan-war-deck-button {
+    margin-left: 660px;
+}

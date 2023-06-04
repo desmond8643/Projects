@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clash Royale Deck Builder</title>
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="stylesheet" href="styles/clan-war.css">
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <div class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="deck-list.html">Deck List</a></li>
+                    <li><a href="clan-war.html">Clan War Deck Builder</a></li>
+                </div>
+            </ul>
+        </nav>
+        <div class="header">
+            <h1>Clan War Deck Builder</h1>
+            <button class="js-reset-clan-war-deck-button reset-clan-war-deck-button">Reset Deck</button>
+            <button class="js-random-clan-war-deck-button random-clan-war-deck-button">Random</button>
+            <button class="js-auto-clan-war-deck-button auto-clan-war-deck-button">Auto</button>
+        </div>
+
+        <div class="deck-container">
+            <div class="clan-war-deck js-clan-war-deck">
+            </div>
+        </div>
+
+        <div class="built-deck-list js-built-deck-list">
+        </div>
+       
+    </body>
+    <script src="scripts/deck.js"></script>
+    <script src="scripts/troops-data.js"></script>
+    <script src="scripts/clan-war-content.js"></script>
+</html>

@@ -1,0 +1,85 @@
+h1 {
+    padding-left: 8px;
+}
+
+h2 {
+    padding-left: 8px;
+}
+
+.troop-image {
+    width: 100px;
+    cursor: pointer;
+}
+
+.all-troops, .troops-rarity {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    justify-content: center;
+}
+
+.deck {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 100px);
+}
+
+.deck-troop {
+    height: 120px;
+    width: 100px;
+    border-style: solid;
+    border-color: black
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+    
+}
+
+.width-container {
+    width: 430px;
+    position: relative;
+}
+
+.build-deck-button {
+    position: absolute;
+    bottom: -35px;
+    right: 0px;
+}
+
+.reset-deck-button {
+    position: absolute;
+    bottom: -35px;
+    right: 90px;
+}
+
+.random-deck-button {
+    position: absolute;
+    bottom: -35px;
+    left: 0px;
+}
+
+.sort-container {
+    position: relative;
+}
+
+.sort-troops-button {
+    position: absolute;
+    top: 0px;
+    left: 110px;
+    font-size: 18px;
+
+}
+
+.troop-grid {
+    transition: opacity 0.2s, active 0.2s;
+}
+.troop-grid:hover {
+    opacity: 0.9;
+}
+
+.troop-grid:active {
+    opacity: 0.5;
+}
